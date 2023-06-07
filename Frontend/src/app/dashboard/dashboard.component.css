@@ -1,7 +1,15 @@
-
+.containers {
+   
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/23/c3/dc/23c3dcab256e90153c4d03ea769ff571.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
   .navbar {
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color:  #77cfdb;
+    padding: 20px;
+
   }
   
   .navbar-brand {
@@ -10,21 +18,73 @@
     text-decoration: none;
     color: #333;
   }
-  
   .navbar-buttons {
     float: right;
   }
   
   .navbar-button {
-    margin-left: 10px;
-    padding: 6px 12px;
+    margin: -7px 9px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
+    border: none;
     border-radius: 4px;
-    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
   }
   
   .navbar-button:hover {
     background-color: #0056b3;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 100%;
+    max-height: 250px;
+    margin: 10px 0px;
+
+    background-color: #f1f1f1;
+    padding: 10px;
+   
+    box-sizing: border-box;
+  }
+  
+  .card-title {
+    margin: 0;
+  }
+  
+  .card-content {
+    margin-top: 10px;
+  }
+  
+  .card-buttons {
+    margin-top: 10px;
+  }
+  
+  .card-button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  
+  .edit-button {
+    background-color: #28a745;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .card-button:hover {
+    opacity: 0.8;
   }
   
