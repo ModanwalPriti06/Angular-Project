@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/23/c3/dc/23c3dcab256e90153c4d03ea769ff571.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  button {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    background-color: #0e4a66; /* Set the background color */
+    color: white; /* Set the text color */
+    border: none; /* Remove the button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    border-radius: 4px; /* Add rounded corners */
+    font-size: 16px; /* Set the font size */
+    width: 200px;
+    margin: 20px;
+  }
+  
+  button:hover {
+    background-color: #3d6abd; /* Change the background color on hover */
+  }

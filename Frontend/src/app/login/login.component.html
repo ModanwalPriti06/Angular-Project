@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="inner-div">
-       <h2>Registration Form</h2>
+       <h2>Login Form</h2>
        <div class="form-group">
          <label for="username">UserName:</label>
          <input class="first-input" type="text" id="username" [(ngModel)]="name">
@@ -11,13 +11,12 @@
          <input type="text" id="password" [(ngModel)]="password">
        </div>
        <div class="form-group">
-         <button (click)="submitForm()">Submit</button>
+         <button (click)="loginForm()">Login</button>
        </div>
        <div class="forgot-password">
-         <a href="#">Forgot Password?</a>
+         <a (click)="signForm()">Forgot Password?</a>
        </div>
-     </div>
-       
+     </div>   
    </div>
  
  

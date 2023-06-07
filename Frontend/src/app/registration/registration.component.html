@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="inner-div">
+       <h2>Registration Form</h2>
+       <div class="form-group">
+         <label for="username">UserName:</label>
+         <input class="first-input" type="text" id="username" [(ngModel)]="name">
+       </div>
+       <div class="form-group">
+         <label for="password">Password:</label>
+         <input type="text" id="password" [(ngModel)]="password">
+       </div>
+       <div class="form-group">
+        <label for="c-password">Confirm Password:</label>
+        <input type="text" id="c-password" [(ngModel)]="confpassword">
+      </div>
+      <div class="form-group">
+        <label for="emial">Email:</label>
+        <input class="first-input" type="text" id="email" [(ngModel)]="email">
+      </div>
+      <div class="form-group">
+        <label for="mob">Mobile No:</label>
+        <input class="first-input" type="text" id="mob" [(ngModel)]="mobile">
+      </div>
+       <div class="form-group">
+         <button (click)="signForm()">Sign In</button>
+       </div>
+       <div class="have-account">
+        <p>Already have an account?</p>
+            <a (click)="loginForm()">Login</a>
+       </div>
+     </div>   
+   </div>
+ 
+ 

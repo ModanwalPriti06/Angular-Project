@@ -1,0 +1,30 @@
+
+  .navbar {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navbar-buttons {
+    float: right;
+  }
+  
+  .navbar-button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .navbar-button:hover {
+    background-color: #0056b3;
+  }
+  
