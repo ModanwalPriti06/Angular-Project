@@ -1,21 +1,22 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend",
+  "description": "backend-example",
   "main": "index.js",
   "scripts": {
     "devtest": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rahul",
+  "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
   "dependencies": {
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "mongoose": "^7.2.2",
-    "router": "^1.3.8"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.2.2"
   }
 }
