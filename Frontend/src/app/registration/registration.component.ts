@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class RegistrationComponent {
   public name :string = "";
   public password :string = "";
-  public confpassword :string = "";
+  public confirmPassword :string = "";
   public email :string = "";
   public mobile :string = "";
 
@@ -26,7 +26,7 @@ export class RegistrationComponent {
      const payload = {
        name: this.name,
        password: this.password,
-       confpassword:this.confpassword,
+       confirmPassword:this.confirmPassword,
       email: this.email,
       mobile:this.mobile
      }
@@ -34,6 +34,10 @@ export class RegistrationComponent {
      this.router.navigate(['/login']);
    }
    loginForm(){
+    // if (this.name==="") {
+    //   console.log("sorry fill username")
+    // }
+
     this.router.navigate(['/login']);
 
 
@@ -41,3 +45,4 @@ export class RegistrationComponent {
  
 
 }
+

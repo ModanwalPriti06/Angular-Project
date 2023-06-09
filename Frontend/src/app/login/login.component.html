@@ -3,18 +3,37 @@
     <div class="inner-div">
        <h2>Login Form</h2>
        <div class="form-group">
-         <label for="username">UserName:</label>
-         <input class="first-input" type="text" id="username" [(ngModel)]="name">
-       </div>
-       <div class="form-group">
-         <label for="password">Password:</label>
-         <input type="text" id="password" [(ngModel)]="password">
-       </div>
+        <label for="username">UserName:</label>
+        <input class="first-input" type="text" id="username" [(ngModel)]="name" name="username" required pattern="[A-Za-z]+" #usernameNgModel="ngModel" />
+        <div *ngIf="usernameNgModel.invalid && (usernameNgModel.dirty || usernameNgModel.touched)">
+          <div *ngIf="usernameNgModel.hasError('required')"  class="error-message">Username is required.</div>
+          <div *ngIf="usernameNgModel.hasError('pattern')"  class="error-message">Username should contain only alphabetical letters.</div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[@$!%*#?&])\w{8,}" #passwordNgModel="ngModel" />
+        <div *ngIf="passwordNgModel.invalid && (passwordNgModel.dirty || passwordNgModel.touched)">
+          <div *ngIf="passwordNgModel.hasError('required')"  class="error-message">Password is required.</div>
+          <div *ngIf="passwordNgModel.hasError('pattern')"  class="error-message">Password should be at least 8 characters long, alphanumeric, and contain at least one special symbol (@$!%*#?&).</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="remember-checkbox">
+          <input type="checkbox" id="remember-checkbox">
+          Remember Me
+        </label>
+        
+      </div> 
        <div class="form-group">
          <button (click)="loginForm()">Login</button>
        </div>
        <div class="forgot-password">
-         <a (click)="signForm()">Forgot Password?</a>
+        <p>New User? 
+         <a (click)="signForm()">Sign In</a>
+        </p>
+
        </div>
      </div>   
    </div>

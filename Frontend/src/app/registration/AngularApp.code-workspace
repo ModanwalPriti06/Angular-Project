@@ -1,12 +1,11 @@
 {
 	"folders": [
 		{
-			"name": "Backend",
-			"path": "../../../../../Downloads/Backend"
-		},
-		{
 			"name": "my-app",
 			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../Downloads/backend 2"
 		}
 	],
 	"settings": {}
