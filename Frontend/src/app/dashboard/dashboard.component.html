@@ -8,45 +8,11 @@
       </div>
     </nav>
     <div class="card-container">
-        <div class="card">
-          <h3 class="card-title">Card 1</h3>
-          <p class="card-content">This is the content of Card 1.</p>
-          <div class="card-buttons">
-            <button class="card-button edit-button">Edit</button>
-            <button class="card-button delete-button">Delete</button>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h3 class="card-title">Card 2</h3>
-          <p class="card-content">This is the content of Card 2.</p>
-          <div class="card-buttons">
-            <button class="card-button edit-button">Edit</button>
-            <button class="card-button delete-button">Delete</button>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h3 class="card-title">Card 3</h3>
-          <p class="card-content">This is the content of Card 3.</p>
-          <div class="card-buttons">
-            <button class="card-button edit-button">Edit</button>
-            <button class="card-button delete-button">Delete</button>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h3 class="card-title">Card 4</h3>
-          <p class="card-content">This is the content of Card 4.</p>
-          <div class="card-buttons">
-            <button class="card-button edit-button">Edit</button>
-            <button class="card-button delete-button">Delete</button>
-          </div>
-        </div>
-      
-        <div class="card">
-          <h3 class="card-title">Card 5</h3>
-          <p class="card-content">This is the content of Card 5.</p>
+      <div class="card" *ngFor="let card of cards">
+          <h3 class="card-title">{{card.fullname}}</h3>
+          <p class="card-content">{{card.password}}</p>
+          <p class="card-content">{{card.email}}</p>
+          <p class="card-content">{{card.mobile}}</p>
           <div class="card-buttons">
             <button class="card-button edit-button">Edit</button>
             <button class="card-button delete-button">Delete</button>

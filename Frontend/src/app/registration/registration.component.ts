@@ -1,5 +1,9 @@
+import { HttpClient } from '@angular/common/http';
+
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import axios from 'axios';
+
 
 @Component({
   selector: 'app-registration',
@@ -11,35 +15,40 @@ export class RegistrationComponent {
   public password :string = "";
   public confirmPassword :string = "";
   public email :string = "";
-  public mobile :string = "";
+  public mobile :Number = 0;
 
- 
-   constructor(private router: Router) {
+   constructor(private router: Router, private http:HttpClient) {
     
     }
  
    ngOnInit() {
      console.log(this.name,"name is called")
    }
-   signForm() {
+   register() {
      console.log(this.name,"name is called")
      const payload = {
-       name: this.name,
+       fullname: this.name,
        password: this.password,
-       confirmPassword:this.confirmPassword,
       email: this.email,
-      mobile:this.mobile
+      mobile:this.mobile,
      }
      console.log(payload,"payload is called")
      this.router.navigate(['/login']);
+
+     
+   axios.post('http://localhost:5001/signup', payload)
+  .then(response => {
+    // Handle the response data
+    console.log(response.data, "response data");
+  })
+  .catch(error => {
+    // Handle the error
+    console.log(error, "error");
+  });
+
    }
    loginForm(){
-    // if (this.name==="") {
-    //   console.log("sorry fill username")
-    // }
-
     this.router.navigate(['/login']);
-
 
    }
  

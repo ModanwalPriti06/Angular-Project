@@ -3,6 +3,7 @@
    
     
     <div class="inner-div">
+      <form>
        <h2>Registration Form</h2>
        <div class="form-group">
         <label for="username">UserName:</label>
@@ -12,8 +13,7 @@
           <div *ngIf="usernameNgModel.hasError('pattern')"  class="error-message">Username should contain only alphabetical letters.</div>
         </div>
       </div>
-      
-      <div class="form-group">
+    <div class="form-group">
         <label for="password">Password:</label>
         <input type="password" id="password" [(ngModel)]="password" name="password" required pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[@$!%*#?&])\w{8,}$
         " #passwordNgModel="ngModel" />
@@ -30,7 +30,7 @@
           <div *ngIf="confirmPasswordNgModel.hasError('required')" class="error-message">Confirm Password is required.</div>
           <div *ngIf="password !== confirmPassword" class="error-message">Password and Confirm Password do not match.</div>
         </div>
-      </div>
+      </div> 
 
       <div class="form-group">
         <label for="email">Email:</label>
@@ -51,13 +51,15 @@
       </div>
       
        <div class="form-group">
-         <button (click)="signForm()">Sign In</button>
+         <button (click)="register()">Sign Up</button>
        </div>
        <div class="have-account">
         <p>Already have an account?
             <a (click)="loginForm()">Login</a>
         </p>
        </div>
+       </form>
+
      </div>   
    </div>
  

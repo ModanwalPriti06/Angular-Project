@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import axios from 'axios';
 
 
 @Component({
@@ -22,13 +23,24 @@ export class LoginComponent {
    loginForm() {
      console.log(this.name,"name is called")
      const payload = {
-       name: this.name,
+       fullname: this.name,
        password: this.password
      }
      console.log(payload,"payload is called")
      this.router.navigate(['/dashboard']);
 
+     axios.get('http://localhost:5001/signin', {params:payload})
+  .then(response => {
+    // Handle the response data
+    console.log(response.data, "response data");
+  })
+  .catch(error => {
+    // Handle the error
+    console.log(error, "error");
+  });
+
    }
+   
    signForm(){
     this.router.navigate(['/sign']);
 

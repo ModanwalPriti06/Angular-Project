@@ -5,12 +5,12 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true
+    // unique: true
   },
   mobile: {
     type: String,
     required: true,
-    unique: true
+    // unique: true
   },
   fullname: {
     type: String,
@@ -21,6 +21,8 @@ const userSchema = new mongoose.Schema({
     required: true
   }
 });
+
+userSchema.plugin(require('mongoose-timestamp'));
 
 // Create the User model based on the schema
 const User = mongoose.model('User', userSchema);
