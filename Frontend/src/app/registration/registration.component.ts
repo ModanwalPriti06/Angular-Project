@@ -29,13 +29,21 @@ export class RegistrationComponent {
      const payload = {
        fullname: this.name,
        password: this.password,
+       confirmPassword:this.confirmPassword,
       email: this.email,
       mobile:this.mobile,
      }
-     console.log(payload,"payload is called")
+    //  console.log(payload,"payload is called")
+    if(payload.fullname==='' || payload.password==='' ||payload.confirmPassword===''|| payload.email===''|| payload.mobile===0){
+      alert("Please fill all field")
+    }
+   else if(payload.fullname!== '' && payload.password!=='' && payload.email!==''&& payload.mobile!==0 && (payload.password===payload.confirmPassword)){
      this.router.navigate(['/login']);
+   }   
+   else if((payload.password!==payload.confirmPassword)){
+    alert("Password and confirm password not same")
 
-     
+   }
    axios.post('http://localhost:5001/signup', payload)
   .then(response => {
     // Handle the response data

@@ -26,8 +26,12 @@ export class LoginComponent {
        fullname: this.name,
        password: this.password
      }
-     console.log(payload,"payload is called")
+    if(payload.fullname==='' || payload.password===''){
+      alert('please enter field')
+    }
+    else{
      this.router.navigate(['/dashboard']);
+    }
 
      axios.get('http://localhost:5001/signin', {params:payload})
   .then(response => {
@@ -40,10 +44,9 @@ export class LoginComponent {
   });
 
    }
-   
+  
    signForm(){
     this.router.navigate(['/sign']);
-
 
    }
 
